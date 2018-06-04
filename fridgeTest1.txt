@@ -1,0 +1,74 @@
+import time
+from w1Thermsensor import W1ThermSensor
+sensor = W1ThermSensor()
+
+while True:
+	temperature = sensor.get_temperature()
+	print("The temperature is %s celsius" %temperature)
+	time.sleep(1)
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+import 
+
+int temp   # Keep it in celsius
+if (temp <= -15)
+	#increase temperature and send message
+elif (temp >= 10)
+	#decrease temeprature and send message
+else
+	#keep runnning code, the fridge is in good condition
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+#!/usr/bin/env python
+
+import os
+import time
+import subprocess
+import datetime
+import requests
+#import anything relating to temperature
+
+feedID = "##########"
+apiKey = "##########"
+
+#start an API client
+api = APIClient(API_KEY)
+
+while True:
+	temperature = sensor.get_temperature()
+	print("The temperature is %s celsius" %temperature)
+	time.sleep(1)
+
+while True:
+	degreesCelsius = read_temperature()
+	datastream.currentValue = degreesCelsius
+	datastream.at = datetime.datetime.utcnow()
+	try:
+		datastream.update()
+	except requests.HTTPError as e:
+		print "You got an HTTP Error, a {0}:{1}".format(e.errno, e.strerror)
+		#First error is the number, the second error is the string error
+
+	time.sleep(10)
+run()
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+#!/usr/bin/env python
+
+import time
+import RPi.GPIO as GPIO
+import urllib2
+
+lightPin = 18  #a pin to absorb temperature
+event = 'fridgeAlert'
+baseURL = 'https://website.com'
+key = 'key'
+
+GPIO.setmode(GPIO.BCM)
+
+
+
+
